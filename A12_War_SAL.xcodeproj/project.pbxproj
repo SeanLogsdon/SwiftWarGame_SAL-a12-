@@ -11,6 +11,8 @@
 		B5EB5946255CDD7500589333 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB5945255CDD7500589333 /* ContentView.swift */; };
 		B5EB5948255CDD7A00589333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5EB5947255CDD7A00589333 /* Assets.xcassets */; };
 		B5EB594B255CDD7A00589333 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5EB594A255CDD7A00589333 /* Preview Assets.xcassets */; };
+		B5EB5956255D7EC400589333 /* failure.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B5EB5955255D7EC400589333 /* failure.mp3 */; };
+		B5EB5959255D7ED500589333 /* fanfare.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5EB5958255D7ED500589333 /* fanfare.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B5EB5947255CDD7A00589333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5EB594A255CDD7A00589333 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5EB594C255CDD7A00589333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EB5955255D7EC400589333 /* failure.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failure.mp3; sourceTree = "<group>"; };
+		B5EB5958255D7ED500589333 /* fanfare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fanfare.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		B5EB5942255CDD7500589333 /* A12_War_SAL */ = {
 			isa = PBXGroup;
 			children = (
+				B5EB5954255D7E7D00589333 /* Sounds */,
 				B5EB5943255CDD7500589333 /* A12_War_SALApp.swift */,
 				B5EB5945255CDD7500589333 /* ContentView.swift */,
 				B5EB5947255CDD7A00589333 /* Assets.xcassets */,
@@ -67,6 +72,15 @@
 				B5EB594A255CDD7A00589333 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5EB5954255D7E7D00589333 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B5EB5958255D7ED500589333 /* fanfare.wav */,
+				B5EB5955255D7EC400589333 /* failure.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EB594B255CDD7A00589333 /* Preview Assets.xcassets in Resources */,
+				B5EB5956255D7EC400589333 /* failure.mp3 in Resources */,
+				B5EB5959255D7ED500589333 /* fanfare.wav in Resources */,
 				B5EB5948255CDD7A00589333 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,10 @@
 //
 
 import SwiftUI
+import AVFoundation
+var player: AVAudioPlayer!
+var player2: AVAudioPlayer!
+
 
 struct ContentView: View {
     
@@ -17,7 +21,7 @@ struct ContentView: View {
     
     @State private var card1 = "back"
     @State private var card2 = "back"
-
+    @State private var status = "Press Deal!"
     
     var body: some View {
         
@@ -57,13 +61,18 @@ struct ContentView: View {
                     // Updates scores
                     if self.randNum1 > self.randNum2 {
                         score1 += 1
+                        playSound()
+                        status = "Player 1 wins!"
                     }
                     else if self.randNum2 >
                                 self.randNum1 {
                         self.score2 += 1
+                        playSound2()
+                        status = "CPU wins!"
                     }
                         else if self.randNum2 == self.randNum1{
                         self.score1 += 0
+                        status = "Tie!"
                         } // I used else if because else was being weird
                         
                 
@@ -94,9 +103,49 @@ struct ContentView: View {
                     .foregroundColor(.white)
                 }
                     Spacer()
+                
+                Text(status)
+                    .bold()
+                    .padding(.bottom, 20)
+                    .font(.custom("Georgia",size: 40))
             }
         }
     }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "fanfare", withExtension: "wav")
+        
+        // returns if url is empty
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        }catch {
+            print("Sound1 Error")
+    }
+        
+    }
+    
+    func playSound2() {
+        let url2 = Bundle.main.url(forResource: "failure", withExtension: "mp3")
+        
+        // returns if url is empty
+        guard url2 != nil else {
+            return
+        }
+        
+        do {
+            player2 = try AVAudioPlayer(contentsOf: url2!)
+            player2?.play()
+        }catch {
+            print("Sound1 Error")
+    }
+        
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
